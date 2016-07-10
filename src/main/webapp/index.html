@@ -1,0 +1,68 @@
+<html >
+<head>
+
+</head>
+<body>
+
+<a href="localhost:8080/restdemo/departments" target="_blank">getAllDepts</a>
+<br/>
+<a href="localhost:8080/restdemo/departments/1" target="_blank">getDeptById</a>
+<br/>
+<a href="localhost:8080/restdemo/departments/1/subDepts/" target="_blank">getSubDepts</a>
+<br/>
+<a href="localhost:8080/restdemo/departments/2/parentDept/" target="_blank">getParentDept</a>
+<br/>
+<a href="localhost:8080/restdemo/departments/1/employees" target="_blank">getAllEmployeeOfOneDept</a>  
+<br/>
+<form name ="updateDeptById" method="put" action="localhost:8080/restdemo/departments/1">
+	name:           <input name="name" type="text"/>
+	location:<input name="location" type="text"/>
+	<br/>
+	managerId:<input name="managerId" type="text"/>
+	openPositons:<input name="openPositons" type="text"/>
+	<br/>
+  <input type="submit" value="updateDeptById" />
+</form>
+
+<form name ="deleteDeptById" method="delete" action="localhost:8080/restdemo/departments/1">
+  <input type="submit" value="deleteDeptById" />
+</form>
+
+<a href="localhost:8080/restdemo/employees"  target="_blank">getEmployees</a>
+<br/>
+<a href="localhost:8080/restdemo/employees/1"  target="_blank"> getEmployeeById</a>
+ <br/>
+<a href="localhost:8080/restdemo/employees/1/department"  target="_blank"> getDempartOfOneEmployee</a>
+ <br/>
+<form name ="updateEmployeeById" method="put" action="localhost:8080/restdemo/employees/1">
+name:            <input name="name" type="text"/>
+	firstName:<input name="firstName" type="text"/>
+	<br/>
+	lastName:<input name="lastName" type="text"/>
+	ldapUserName:<input name="ldapUserName" type="text"/>
+	<br/>
+	title:<input name="title" type="text"/>
+	grade:<input name="grade" type="text"/>
+	<br/>
+  <input type="submit" value="updateEmployeeById" />
+</form>  
+
+<form name ="deleteEmployeeById" method="delete" action="localhost:8080/restdemo/employees/1">
+  <input type="submit" value="deleteEmployeeById" />
+</form> 
+
+<form name ="addSubDept" method="post" action="localhost:8080/restdemo/departments/1/subDepts">
+  name:           <input name="name" type="text"/>
+	location:<input name="location" type="text"/>
+	<br/>
+	managerId:<input name="managerId" type="text"/>
+	openPositons:<input name="openPositons" type="text"/>
+	<br/>
+  <input type="submit" value="addSubDept" />
+</form>
+
+<form name ="addEmployeeToDept" method="post" action="localhost:8080/restdemo/departments/1/employees">
+  <input type="submit" value="addEmployeeToDept" />
+</form>
+</body>
+</html>
